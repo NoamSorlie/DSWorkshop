@@ -12,9 +12,11 @@ int main(int argc, char* argv[]) {
     }
 
     std::list<int>::iterator it = intList.begin();
-    while (it != intList.end()) {
+    
+    for (int i = 1; i < argc; i++)
+    {
         std::cout << *it << std::endl;
-        it++;
+        it = intList.erase(intList.begin());
     }
 
     return 0;
